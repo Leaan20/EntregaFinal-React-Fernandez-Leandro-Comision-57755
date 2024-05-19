@@ -1,0 +1,49 @@
+.navBar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #005477;
+    gap: 10px;
+}
+
+.imgContainer {
+    width: 120px;
+    margin: 5px;
+}
+.logo {
+    width: 80px;
+}
+
+.listContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+    gap: 8px;
+}
+
+.navigationButton {
+    border: 10px  transparent;
+    border-radius: 20px;
+    background-color: rgb(232, 132, 33);
+    color:#000;
+    box-shadow: none;
+    padding: 10px;
+    transition: .5s;
+
+}
+
+.navigationButton:hover{
+    background-color:#32CD32 ;
+    color: #fff;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.cartContainer {
+    width: 30px;
+    display: flex;
+    gap: 4px;
+}

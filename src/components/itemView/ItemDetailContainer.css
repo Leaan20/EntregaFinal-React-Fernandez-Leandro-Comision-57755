@@ -1,0 +1,12 @@
+.principalContainer{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.principalContainer .detailContainer{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+
+}
