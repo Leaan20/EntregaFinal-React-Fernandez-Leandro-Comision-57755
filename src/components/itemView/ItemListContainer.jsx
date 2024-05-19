@@ -1,7 +1,7 @@
 import './ItemListContainer.css'
 
 import {useState, useEffect} from 'react';
-import { getProducts } from '../logic/asyncmock.js';
+import { getProducts } from '../../logic/asyncmock.js';
 import Item from './Item';
 export default function ItemListContainer(){
     const [items, setItems] = useState([]);
@@ -13,6 +13,7 @@ export default function ItemListContainer(){
 
     return (
     <>
+        <h1>Productos</h1>
         <article className='itemContainer'>
            {items.map((item)=>(
             <Item
@@ -22,6 +23,7 @@ export default function ItemListContainer(){
             price={item.precio}
             image={item.img}
             idItem={item.id}
+            idProdc={item.id}
             />
            ))}
         </article>

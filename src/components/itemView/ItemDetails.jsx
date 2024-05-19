@@ -1,22 +1,37 @@
+import {getProduct} from '../../logic/asyncmock.js';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+
+import './ItemDetails.css';
 import ButtonComponent from './ButtonComponent';
 import ItemCount from './ItemCount';
 
 export default function ItemDetail() {
+
+const [product, setProduct] =useState({});
+
+const {prodcId} = useParams();
+
+useEffect(()=>{
+    setProduct(getProduct(prodcId));
+},[])
+
     return (
         <>
             <div className='detailContainer'>
                 <div>
-                    <img className='detailImg' src="" alt="imagen del producto" />
+                    <img className='detailImg' src={product.img} alt={product.nombre} />
                 </div>
 
                 <div className='detailInfo'>
-                    <h4>Nombre del item</h4>
-                    <h6>categoria</h6>
-                    <p>precio</p>
+                    <h4>{product.nombre}</h4>
+                    <p>${product.precio}</p>
                 </div>
 
                 <div className='details'>
-                    <p>detalles</p>
+                    <h6>{product.categoria}</h6>
+                    <p>Color:{product.color}</p>
+                    <p>Marca:{product.marca}</p>
                     <p>Cantidad: 1 </p>
                 </div>
 
