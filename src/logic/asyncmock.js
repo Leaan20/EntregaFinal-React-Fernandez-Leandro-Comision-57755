@@ -296,7 +296,7 @@ const products = [
         resolve(products);
       }, 2000);
     });
-  
+
 
     //funcion que encuentra el producto individual por su id
     export const getProduct = (id)=> {

@@ -33,7 +33,7 @@ useEffect(()=>{
                 </div>
 
                 <div className='details'>
-                    <h6>{product.categoria}</h6>
+                    <h5>{product.categoria}</h5>
                     <p>Color:{product.color}</p>
                     <p>Marca:{product.marca}</p>
                     <p>Cantidad: 1 </p>
@@ -42,7 +42,9 @@ useEffect(()=>{
 
                 <div className='addProductContainer'>
                     <ButtonComponent text={"Agregar al carrito"} />
+                    <div className='buttonsAyR'>
                     <ItemCount />
+                    </div>
                 </div>
             </div>
         </>
