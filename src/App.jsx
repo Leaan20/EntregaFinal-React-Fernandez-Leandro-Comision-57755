@@ -1,9 +1,8 @@
 import './App.css'
 import Navbar from './components/Navigation/NavBar';
 import ContactComponent from './components/contact/ContactComponent';
-import HomeComponent from './components/home/HomeComponent';
 import ItemListContainer from './components/itemView/ItemListContainer';
-import ItemDetails from './components/itemView/ItemDetails';
+import ItemDetailContainer from './components/itemView/ItemDetailContainer';
 import { BrowserRouter, Routes , Route } from 'react-router-dom';
 function App() {
 
@@ -13,9 +12,10 @@ function App() {
       <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route exact path='/' element={<HomeComponent/>}  />
-            <Route exact path='/products' element={<ItemListContainer />}  />
-            <Route exact path='/product/:prodcId' element={<ItemDetails />}  />
+            <Route exact path='/' element={<ItemListContainer />}  />
+            <Route exact path='/item/:Id' element={<ItemDetailContainer />}  />
+            <Route exact path='/category/:categoryId' element={<ItemListContainer />}  />
+            <Route exact path='/category' element={<ItemListContainer />}  />
             <Route exact path='/contact' element={<ContactComponent />}  />
           </Routes>
       </BrowserRouter>

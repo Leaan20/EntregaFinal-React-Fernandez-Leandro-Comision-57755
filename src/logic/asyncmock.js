@@ -6,7 +6,7 @@ const products = [
         color:"azul",
         grosor: "4/3",
         precio: 250000,
-        categoria: "trajes de neoprene",
+        categoria: "trajes",
         talles: [
           "s",
           "m"
@@ -20,7 +20,7 @@ const products = [
         color:"gris",
         grosor: "4/3",
         precio: 280000,
-        categoria: "trajes de neoprene",
+        categoria: "trajes",
         talles: [
           "m",
           "l",
@@ -35,7 +35,7 @@ const products = [
         color:"celeste",
         grosor: "4/3",
         precio: 300000,
-        categoria: "trajes de neoprene",
+        categoria: "trajes",
         talles: [
           "s",
           "m",
@@ -50,7 +50,7 @@ const products = [
         color:"bordo",
         grosor: "4/3",
         precio: 420000,
-        categoria: "trajes de neoprene",
+        categoria: "trajes",
         talles: [
           "s",
           "l",
@@ -65,7 +65,7 @@ const products = [
         color:"negro",
         grosor: "4/3",
         precio: 280000,
-        categoria: "trajes de neoprene",
+        categoria: "trajes",
         talles: [
           "s",
           "m",
@@ -80,7 +80,7 @@ const products = [
         color:"negro",
         grosor: "4/3",
         precio: 250000,
-        categoria: "trajes de neoprene",
+        categoria: "trajes",
         talles: [
           "s",
           "m",
@@ -95,7 +95,7 @@ const products = [
         color:"negro",
         grosor: "4/3",
         precio: 350000,
-        categoria: "trajes de neoprene",
+        categoria: "trajes",
         talles: [
           "s",
           "l",
@@ -110,7 +110,7 @@ const products = [
         color:"bordo",
         grosor: "4/3",
         precio: 290000,
-        categoria: "trajes de neoprene",
+        categoria: "trajes",
         talles: [
           "m",
           "l",
@@ -299,15 +299,35 @@ const products = [
   
 
     //funcion que encuentra el producto individual por su id
-    
-    export const getProduct = (id) => {
-      return products.find((prod) => prod.id == id);
+    export const getProduct = (id)=> {
+      return new Promise ((resolve,reject)=> {
+        const product = products.find((prod) => prod.id == id);
+        if (product) {
+          resolve(product);
+        } else {
+          reject({
+            error: "No se encuentra el producto solicitado."
+          })
+        }
+      })
     };
+    // export const getProduct = (id) => {
+    //   return products.find((prod) => prod.id == id);
+    // };
 
 
     //funcion que filtra por categorias
 
-    export const getCategory = (categoria)=> {
-      return products.filter((prods)=> prods.categoria === categoria);
-    };
+    // export const getCategory = (categoria)=> {
+    //   return new Promise ((resolve,reject)=>{
+    //     const prods = products.filter((productos)=> productos.categoria === categoria);
+    //     if(prods) {
+    //       resolve(prods);
+    //     } else {
+    //       reject({
+    //         error : "No existe la categoria solicitada"
+    //       })
+    //     }
+    //   });
+    // };
 

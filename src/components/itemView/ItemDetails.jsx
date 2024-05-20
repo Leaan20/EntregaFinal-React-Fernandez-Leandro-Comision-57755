@@ -10,10 +10,14 @@ export default function ItemDetail() {
 
 const [product, setProduct] =useState({});
 
-const {prodcId} = useParams();
+const {Id} = useParams();
 
 useEffect(()=>{
-    setProduct(getProduct(prodcId));
+    getProduct(Number(Id))
+        .then((res)=> {
+            setProduct(res)
+        })
+    // setProduct(getProduct(Id));
 },[])
 
     return (

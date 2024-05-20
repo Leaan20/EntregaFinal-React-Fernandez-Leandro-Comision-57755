@@ -10,7 +10,7 @@ export default function Item ({title,category,price,image,idItem , idProdc}){
             <h5 className='category'>{category}</h5>
             <p>Precio: ${price}</p>
             </div>
-            <button className='buttonStyle'><Link to={`/product/${idProdc}`}>Ver detalles</Link></button>
+            <button className='buttonStyle'><Link to={`/item/${idProdc}`}>Ver detalles</Link></button>
         </div>
         </>
     )
