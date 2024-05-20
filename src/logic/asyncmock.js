@@ -311,23 +311,4 @@ const products = [
         }
       })
     };
-    // export const getProduct = (id) => {
-    //   return products.find((prod) => prod.id == id);
-    // };
-
-
-    //funcion que filtra por categorias
-
-    // export const getCategory = (categoria)=> {
-    //   return new Promise ((resolve,reject)=>{
-    //     const prods = products.filter((productos)=> productos.categoria === categoria);
-    //     if(prods) {
-    //       resolve(prods);
-    //     } else {
-    //       reject({
-    //         error : "No existe la categoria solicitada"
-    //       })
-    //     }
-    //   });
-    // };
 
