@@ -1,5 +1,5 @@
 .detailContainer{
-    width:47rem;
+    width:60rem;
     padding: 10px;
     border: 2px solid #ECD47F ;
     border-radius: 20px;
@@ -40,16 +40,8 @@
     
 }
 
-
- .addProductContainer{
-    margin: 20px;
-    padding: 10px;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 5px;
-}
-
-.addProductContainer button {
+.continueToBuy {
+    width: 80px;
     background-color: #ca33ed;
     padding: 7px;
     border-radius: 20px;
@@ -59,7 +51,7 @@
     transition: .5s;
 }
 
-.addProductContainer button:hover {
+.continueToBuy:hover {
     background-color: #db61f6;
     padding: 7px;
     border-radius: 20px;
@@ -67,13 +59,4 @@
     -webkit-box-shadow: 0px 12px 16px -14px rgba(82,69,23,0.75);
     -moz-box-shadow: 0px 12px 16px -14px rgba(82,69,23,0.75);
     cursor: pointer;
-}
-
-
-.addProductContainer .buttonsAyR {
-    display: flex;
-    justify-content: space-around;
-    margin: 5px;
-    padding: 5px;
-    gap:10px;
 }

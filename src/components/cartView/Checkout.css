@@ -1,0 +1,15 @@
+.finContainer {
+    margin: 20px;
+}
+
+.finContainer h2 {
+    font-size: 3rem;
+}
+
+.finContainer .parag{
+    font-size: 1.3rem;
+}
+
+.finContainer .parag span {
+    font-weight: bold;
+}

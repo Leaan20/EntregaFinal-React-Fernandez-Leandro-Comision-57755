@@ -1,8 +1,13 @@
+.cartContainer {
+    display: flex; 
+    gap: 4px; 
+}
 .cart {
     width: 30px;
+    display: inline-block;
 }
 
-.count{
+.cantidad{
     font-size: 18px;
     color: #fff;
     margin: 3px;

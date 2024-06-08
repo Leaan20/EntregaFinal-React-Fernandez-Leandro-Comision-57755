@@ -7,6 +7,7 @@ const products = [
         grosor: "4/3",
         precio: 250000,
         categoria: "trajes",
+        stock: 12 ,
         talles: [
           "s",
           "m"
@@ -21,6 +22,7 @@ const products = [
         grosor: "4/3",
         precio: 280000,
         categoria: "trajes",
+        stock: 8,
         talles: [
           "m",
           "l",
@@ -36,6 +38,7 @@ const products = [
         grosor: "4/3",
         precio: 300000,
         categoria: "trajes",
+        stock: 9,
         talles: [
           "s",
           "m",
@@ -51,6 +54,7 @@ const products = [
         grosor: "4/3",
         precio: 420000,
         categoria: "trajes",
+        stock: 13,
         talles: [
           "s",
           "l",
@@ -66,6 +70,7 @@ const products = [
         grosor: "4/3",
         precio: 280000,
         categoria: "trajes",
+        stock: 5,
         talles: [
           "s",
           "m",
@@ -81,6 +86,7 @@ const products = [
         grosor: "4/3",
         precio: 250000,
         categoria: "trajes",
+        stock: 2,
         talles: [
           "s",
           "m",
@@ -96,6 +102,7 @@ const products = [
         grosor: "4/3",
         precio: 350000,
         categoria: "trajes",
+        stock: 11,
         talles: [
           "s",
           "l",
@@ -111,6 +118,7 @@ const products = [
         grosor: "4/3",
         precio: 290000,
         categoria: "trajes",
+        stock: 1,
         talles: [
           "m",
           "l",
@@ -127,6 +135,7 @@ const products = [
         litros: "43.1L",
         precio: 200000,
         categoria: "tablas",
+        stock: 23,
         img: "/src/assets/img/products/surfboards/FIREWIRE-HOUDINI-VOLCANIC.jpg"
       },
       {
@@ -138,6 +147,7 @@ const products = [
         litros: "41L",
         precio: 220000,
         categoria: "tablas",
+        stock: 22,
         img: "/src/assets/img/products/surfboards/HARLEY-INGLEBY-MOE-MINI.jpg"
       },
       {
@@ -149,6 +159,7 @@ const products = [
         litros: "41.5L",
         precio: 285000,
         categoria: "tablas",
+        stock: 11,
         img: "/src/assets/img/products/surfboards/TBLS-CAMALEON.jpg"
       },
       {
@@ -160,6 +171,7 @@ const products = [
         litros: "38L",
         precio: 270000,
         categoria: "tablas",
+        stock:5,
         img: "/src/assets/img/products/surfboards/FIREWIRE-TOO-FISH.jpg"
       },
       {
@@ -171,6 +183,7 @@ const products = [
         litros: "46L",
         precio: 240000,
         categoria: "tablas",
+        stock:23,
         img: "/src/assets/img/products/surfboards/OCEAN-EARTH-MR-SUPER-TWIN.jpg"
       },
       {
@@ -182,6 +195,7 @@ const products = [
         litros: "40.9L",
         precio: 210000,
         categoria: "tablas",
+        stock: 3,
         img: "/src/assets/img/products/surfboards/INDIO-ENDURANCE-RANCHO.jpg"
       },
       {
@@ -193,6 +207,7 @@ const products = [
         litros: "31.5L",
         precio: 320000,
         categoria: "tablas",
+        stock: 4,
         img: "/src/assets/img/products/surfboards/DHD-PHOENIX-WIDE.jpg"
       },
       {
@@ -202,6 +217,7 @@ const products = [
         color: "rosa",
         precio: 20000,
         categoria: "accesorios",
+        stock: 5,
         img: "/src/assets/img/products/accesories/GRIP-CHANNEL-ISLANDS-LINED-UP-FLAT.jpg"
       },
       {
@@ -211,6 +227,7 @@ const products = [
         color: "gris",
         precio: 18000,
         categoria: "accesorios",
+        stock: 6,
         img: "/src/assets/img/products/accesories/INVENTO-FCS-ALL-ROUND-ESSENTIAL-9.jpg"
       },
       {
@@ -220,6 +237,7 @@ const products = [
         color: "azul",
         precio: 22000,
         categoria: "accesorios",
+        stock: 5,
         img: "/src/assets/img/products/accesories/QUILLAS-FCS-II-PERFORMER-PC-S-TRI-FINS.jpg"
       },
       {
@@ -229,6 +247,7 @@ const products = [
         color: "negro",
         precio: 20000,
         categoria: "accesorios",
+        stock: 8,
         img: "/src/assets/img/products/accesories/QUILLAS-FCS-II-PG-ALBUM-S-M-KEEL-TWIN-FINS.jpg"
       },
       {
@@ -238,6 +257,7 @@ const products = [
         color: "negro",
         precio: 23000,
         categoria: "accesorios",
+        stock: 34,
         img: "/src/assets/img/products/accesories/INVENTO-OCEAN-EARTH-REEF-QUICK-RELEASE-ONE-XT-7.jpg"
       },
       {
@@ -247,6 +267,7 @@ const products = [
         color: "mango",
         precio: 15000,
         categoria: "accesorios",
+        stock: 21,
         img: "/src/assets/img/products/accesories/QUILLAS-FCS-II-MF-PC-L-TRI-FINS.jpg"
       },
       {
@@ -256,6 +277,7 @@ const products = [
         color: "negro",
         precio: 17000,
         categoria: "accesorios",
+        stock: 33,
         img: "/src/assets/img/products/accesories/GRIP-CREATURES-GROM-JACK-FREESTONE-LITE.jpg"
       },
       {
@@ -265,6 +287,7 @@ const products = [
         color: "rosa",
         precio: 13000,
         categoria: "accesorios",
+        stock:9 ,
         img: "/src/assets/img/products/accesories/GRIP-CREATURES-ITALO-LITE-ECOPURE.jpg"
       },
       {
@@ -274,6 +297,7 @@ const products = [
         color: "cyan",
         precio: 25000,
         categoria: "accesorios",
+        stock: 12,
         img: "/src/assets/img/products/accesories/GRIP-CREATURES-MICK-EUGENE-FANNING-LITE.jpg"
       },
       {
@@ -283,6 +307,7 @@ const products = [
         color: "mostaza",
         precio: 27000,
         categoria: "accesorios",
+        stock: 21,
         img: "/src/assets/img/products/accesories/INVENTO-DEFLOW-8FT-7MM.jpg"
       }
     ] ;

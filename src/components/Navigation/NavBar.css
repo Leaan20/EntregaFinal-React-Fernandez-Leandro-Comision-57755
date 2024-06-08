@@ -42,8 +42,7 @@
     cursor: pointer;
 }
 
-.cartContainer {
-    width: 30px;
+.CartContainer{
     display: flex;
-    gap: 4px;
+    flex-direction: row;
 }

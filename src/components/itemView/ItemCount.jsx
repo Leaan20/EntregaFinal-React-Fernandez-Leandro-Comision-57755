@@ -1,20 +1,21 @@
-import { useState } from "react";
+import './ItemCount.css';
 
-export default function ItemCount() {
+export default function ItemCount({ count, handleSum, handleRest , handleAddToCart}) {
 
-    const [count,setCount] =useState(1);
 
-    const handleSum = ()=> {
-        setCount(count + 1);
-    }
-    const handleRest = ()=> {
-        count >= 2 && setCount(count -1);
-    }
+
     return (
-        <>
-            <button className="buttonHandler" onClick={handleSum}> + </button>
-            <p className="productQuantity">{count}</p>
-            <button className="buttonHandler" onClick={handleRest}> - </button>
+        <>  <div className='addProductContainer'>
+
+                <div className='buttonsAyR'>
+                    <button className="buttonHandler" onClick={handleRest}> - </button>
+                    <p className="productQuantity">{count}</p>
+                    <button className="buttonHandler" onClick={handleSum}> +  </button>
+                </div>
+            
+                <button onClick={handleAddToCart} >Agregar al carrito</button>
+       
+            </div>
         </>
     )
 }

@@ -11,7 +11,7 @@ export default function Navbar(){
     <>
     <nav className='navBar'>
         <div className='imgContainer'>
-            <a > <Link to={'/'}><img className='logo' src={Logo} alt="Logo DuckWave" /></Link></a>
+             <Link to={'/'}><img className='logo' src={Logo} alt="Logo DuckWave" /></Link>
         </div>
         <ul className='listContainer'>
         <li><button className='navigationButton' ><Link to={'/'} >inicio</Link>  </button></li>
@@ -20,9 +20,10 @@ export default function Navbar(){
         <li><button className='navigationButton' > <Link to={'/category/accesorios'}> Accesorios</Link> </button></li>
         <li><button className='navigationButton' ><Link to={'/contact'}>Contacto</Link>  </button></li>
         </ul>
-        <div className='cartContainer'>
-            <CartWidget />
-        </div>
+            <div className='CartContainer'></div>
+            <Link to={'/cart'}> 
+                <CartWidget />
+            </Link>
     </nav>
     </>
     )

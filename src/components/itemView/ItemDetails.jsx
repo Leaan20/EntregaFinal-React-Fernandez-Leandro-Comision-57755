@@ -1,52 +1,62 @@
-import {getProduct} from '../../logic/asyncmock.js';
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-
+import {  useContext , useState } from 'react';
 import './ItemDetails.css';
-import ButtonComponent from './ButtonComponent';
 import ItemCount from './ItemCount';
+import { CartContext } from '../context/CartContext';
+import { Link } from 'react-router-dom';
 
-export default function ItemDetail() {
 
-const [product, setProduct] =useState({});
+export default function ItemDetail({ product }) {
 
-const {Id} = useParams();
+    const {cart, addToCart} = useContext(CartContext);
+    console.log(cart);
 
-useEffect(()=>{
-    getProduct(Number(Id))
-        .then((res)=> {
-            setProduct(res)
-        })
-    // setProduct(getProduct(Id));
-},[])
+ //Manejo de cantidad
+ 
+ const [count,setCount] = useState(1);
+
+ const handleSum = ()=> {
+     //Esto va a permitir que no se pueda sumar mas alla, del stock disponible
+     count < product.stock && setCount(count + 1);
+ }
+ const handleRest = ()=> {
+     //No permita al usuario agregar 0 productos al carrito
+     count >= 2 && setCount(count -1);
+ }
+
+
+
 
     return (
         <>
             <div className='detailContainer'>
+                
                 <div>
-                    <img className='detailImg' src={product.img} alt={product.nombre} />
+                    <img className='detailImg' src={product.image} alt={product.nombre} />
                 </div>
 
                 <div className='detailInfo'>
-                    <h4>{product.nombre}</h4>
-                    <p>${product.precio}</p>
+                    <h4>{product.title}</h4>
+                    <p>${product.price}</p>
                 </div>
 
                 <div className='details'>
-                    <h5>{product.categoria}</h5>
-                    <p>Color:{product.color}</p>
-                    <p>Marca:{product.marca}</p>
-                    <p>Cantidad: 1 </p>
+                    <h5>{product.categoryId}</h5>
+                    <p>Color:{product.description}</p>
+                    <p>Marca:{product.brand}</p>
+                    <p>Stock: {product.stock} </p>
                 </div>
+                
+                <ItemCount count= {count} handleSum={handleSum} handleRest={handleRest} handleAddToCart={()=> { addToCart(product , count) }} />
 
-
-                <div className='addProductContainer'>
-                    <ButtonComponent text={"Agregar al carrito"} />
-                    <div className='buttonsAyR'>
-                    <ItemCount />
-                    </div>
-                </div>
+                {
+                cart.length > 0 &&
+                <Link to={'/cart'}>
+                    <button className='continueToBuy'>Ir al carrito</button>
+                </Link>
+                }
+               
             </div>
         </>
     )
 }
+

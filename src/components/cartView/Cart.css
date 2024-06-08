@@ -1,0 +1,53 @@
+/* Estilos para la lista de productos en el carrito */
+.cartContenedor{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.cartItemList {
+    list-style: none;
+    padding: 0; 
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 500px;
+  }
+  
+  .cartItem {
+    border-bottom: 1px solid #ccc; 
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cartItem img {
+    width: 50px; 
+    height: 50px;
+    margin-right: 12px; 
+  }
+  
+  .cartItemInfo {
+    flex-grow: 1; 
+  }
+  
+  .cartItemActions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cartItemQuantity {
+    margin-right: 10px; 
+  }
+  .cartItemDelete {
+    color: red; 
+    cursor: pointer;
+  }
+
+  .cartOptions {
+    display: flex;
+  }
+
+  .parrafo {
+    font-size: 30px;
+    font-weight: bold;
+  }

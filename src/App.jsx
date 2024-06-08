@@ -1,14 +1,25 @@
-import './App.css'
+import { BrowserRouter, Routes , Route } from 'react-router-dom';
+
 import Navbar from './components/Navigation/NavBar';
 import ContactComponent from './components/contact/ContactComponent';
 import ItemListContainer from './components/itemView/ItemListContainer';
 import ItemDetailContainer from './components/itemView/ItemDetailContainer';
-import { BrowserRouter, Routes , Route } from 'react-router-dom';
+import Cart from './components/cartView/Cart';
+import Checkout from './components/cartView/Checkout';
+
+import './App.css'
+import { CartProvider } from './components/context/CartContext';
+
 function App() {
+
 
 
   return (
     <>
+      {/**Envolvemos todo el contexto de la app para que pueda utilizar las funciones que proveamos por el provider */}
+
+    <CartProvider>
+
       <BrowserRouter>
           <Navbar />
           <Routes>
@@ -17,8 +28,12 @@ function App() {
             <Route exact path='/category/:categoryId' element={<ItemListContainer />}  />
             <Route exact path='/category' element={<ItemListContainer />}  />
             <Route exact path='/contact' element={<ContactComponent />}  />
+            <Route exact path='/cart' element={<Cart />}  />
+            <Route exact path='/checkout' element={<Checkout />}  />
           </Routes>
       </BrowserRouter>
+
+      </CartProvider>
     </>
   )
 }
