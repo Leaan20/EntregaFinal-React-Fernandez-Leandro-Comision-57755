@@ -36,13 +36,13 @@ export default function ItemDetail({ product }) {
 
                 <div className='detailInfo'>
                     <h4>{product.title}</h4>
-                    <p>${product.price}</p>
+                    <p>Precio: ${product.price}</p>
                 </div>
 
                 <div className='details'>
                     <h5>{product.categoryId}</h5>
-                    <p>Color:{product.description}</p>
-                    <p>Marca:{product.brand}</p>
+                    <p>{product.description}</p>
+                    <p>Marca: {product.brand}</p>
                     <p>Stock: {product.stock} </p>
                 </div>
                 

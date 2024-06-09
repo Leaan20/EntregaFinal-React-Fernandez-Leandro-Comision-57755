@@ -1,40 +1,24 @@
-.loader-container {
-    width: 100%;
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* diseño de olas */
+.load-container {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
 }
 
-.loader {
-    position: relative;
-    width: 84px;
-    height: 84px;
-    background: linear-gradient(to right, #034 20%, #0000 21%);
-    background-repeat: repeat-x;
-    background-size: 36px 8px;
-    background-position: 9px bottom;
-    animation: moveX 0.5s linear infinite;
+.load-container .loader {
+  width: 300px;
+  height: 110px;
+  background: radial-gradient(circle 11px at top, #0000 94%, #b0e5f3) 0 20px, radial-gradient(circle 11px at top, #0000 94%, #5dc1e4) 0 10px, radial-gradient(circle 11px at top, #0000 94%, #008cd9) 0 0;
+  background-size: 20px 100%;
+  background-repeat: repeat-x;
+  animation: l7 1s infinite linear;
+}
+
+@keyframes l7 {
+  50% {
+      background-position: 10px 15px, -10px 12px, 15px 8px;
   }
-  .loader::before  {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    border-radius: 2px;
-    background-color: #f34;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50% , -50% );
-    animation: rotate 0.5s linear infinite;
+  100% {
+      background-position: 20px 20px, -20px 10px, 20px 0px;
+  }
 }
-
-@keyframes moveX {
-  0%, 25%{    background-position: 10px bottom }
-  75% , 100% {background-position: -30px bottom;}
-}
-@keyframes rotate {
-  0%, 25% { transform:translate(-50% , -50% ) rotate(0deg)}
-  75%,  100% { transform:translate(-55% , -55% ) rotate(90deg)}
-}
-  
