@@ -33,6 +33,6 @@ Luego en la seccion propia de carrito, se puede verificar los productos agregado
 
 
 
-## Sobre mi 😁
+#### Sobre mi 😁
 Incurriendo en el mundo de la programacion, cursando la carrera de fullstack developer en Coderhouse.
 

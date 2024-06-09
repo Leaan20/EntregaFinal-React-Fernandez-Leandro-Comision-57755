@@ -13,3 +13,17 @@
 .finContainer .parag span {
     font-weight: bold;
 }
+
+h2 {
+    margin: 20px;
+}
+
+.form-container {
+    margin: 20px;
+}
+
+
+.errorForm {
+    background-color: #f03;
+    color: #ffa;
+}

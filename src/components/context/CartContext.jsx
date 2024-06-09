@@ -54,11 +54,3 @@ export const CartProvider = ( { children } ) => {
 
 };
 
-//Para restar del stock
-// if (selectedProduct) {
-//   const updatedProducts = products.map((product) => {
-//     if (product.id === productId) {
-//       return { ...product, stock: product.stock - count };
-//     }
-//     return product;
-//   });
