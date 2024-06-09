@@ -22,7 +22,7 @@ export default function Checkout() {
 
 
 
-
+//configuramos el envio del pedido a FireStore
 
     const handleSubmit = (event) => {
         event.preventDefault();

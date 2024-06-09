@@ -31,17 +31,22 @@ export const CartProvider = ( { children } ) => {
 
   };
 
+  
   const cartCount = () => {
     return cart.reduce((acc, prod) => acc + prod.cantidad, 0);
   };
+
+
   const totalPrice = () => {
     return cart.reduce((acc, prod) => acc + prod.price * prod.cantidad, 0);
   };
 
+  //Funcion que vacia el carrito
   const cleanCart = () => {
     setCart([]);
   };
 
+  //Eliminamos un producto del carrito
   const removeFromCart = (productId) => {
     setCart(cart.filter(item => item.id !== productId));
     toast.info('Eliminaste un producto del carrito',{
