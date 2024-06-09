@@ -10,18 +10,22 @@ import Checkout from './components/cartView/Checkout';
 import './App.css'
 import { CartProvider } from './components/context/CartContext';
 
+//Toastify
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+
 function App() {
 
-
+  
 
   return (
     <>
       {/**Envolvemos todo el contexto de la app para que pueda utilizar las funciones que proveamos por el provider */}
-
     <CartProvider>
 
       <BrowserRouter>
           <Navbar />
+          <ToastContainer />
           <Routes>
             <Route exact path='/' element={<ItemListContainer />}  />
             <Route exact path='/item/:Id' element={<ItemDetailContainer />}  />

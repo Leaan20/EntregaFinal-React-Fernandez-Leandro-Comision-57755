@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 export const CartContext = createContext();
 
 const initialCart = JSON.parse(localStorage.getItem('cart')) || [];
-
+import { toast } from "react-toastify";
 
 
 export const CartProvider = ( { children } ) => {
@@ -23,6 +23,12 @@ export const CartProvider = ( { children } ) => {
     }
 
     setCart(newCart);
+
+    //Enviamos una notificacion al usuario
+    toast.success('Agregaste un producto al carrito🛒🙌', {
+      autoClose: 1500,
+    });
+
   };
 
   const cartCount = () => {
@@ -38,6 +44,9 @@ export const CartProvider = ( { children } ) => {
 
   const removeFromCart = (productId) => {
     setCart(cart.filter(item => item.id !== productId));
+    toast.info('Eliminaste un producto del carrito',{
+      autoClose: 1500,
+    });
   };
 
 

@@ -5,6 +5,7 @@ import { CartContext } from "../context/CartContext";
 
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase/firebase";
+import { toast } from 'react-toastify';
 
 export default function Checkout() {
 
@@ -38,6 +39,9 @@ export default function Checkout() {
         .then(doc => {
           setOrderId(doc.id);
           cleanCart();
+          toast.success("Pedido enviado correctamente !! 🏄🏽‍♀️🏄🏽‍♂️",{
+            autoClose: 2000,
+          });
         })
     }
 
@@ -51,6 +55,7 @@ const validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 const inputsValid = (values.nombre && values.email && (values.phone && values.phone.length >= 8));
 
 if(orderId) {
+  
   return (
       <div className="finContainer">
         <h2>Muchas gracias por su compra 😁 </h2>

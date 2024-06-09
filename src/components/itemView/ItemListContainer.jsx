@@ -4,12 +4,15 @@ import {useState, useEffect} from 'react';
 
 import { collection, getDocs, query , where } from 'firebase/firestore';
 import { db } from '../../firebase/firebase.js';
-
+import Loader from '../loader/Loader';
 
 
 import Item from './Item';
 export default function ItemListContainer(){
+
+
     const [items, setItems] = useState([]);
+    const [isLoading, setIsLoading] = useState (false);
     
     const {categoryId} = useParams();
 
@@ -19,7 +22,8 @@ export default function ItemListContainer(){
 
         //si existe una categoria ,lo muestre, caso contrario muestre la referencia a los productos.
         const qu = categoryId ? query(dbProductsRef, where('categoryId', '==', categoryId )) : dbProductsRef ;
-
+        //utilizamos este loader
+        setIsLoading(true)
         getDocs(qu)
             .then(res => {
 
@@ -28,6 +32,7 @@ export default function ItemListContainer(){
                         return {...doc.data(), id: doc.id}
                     })
                 );
+                setIsLoading(false);
             })
 
       }, [categoryId]);
@@ -36,6 +41,8 @@ export default function ItemListContainer(){
     return (
     <>
         <h1>Bienvenido a DuckWave</h1>
+        {isLoading &&  <Loader />}
+
         <article className='itemContainer'>
            {items.map((item)=>(
             <Item

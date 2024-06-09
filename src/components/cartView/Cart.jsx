@@ -3,12 +3,15 @@ import { CartContext } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 
 import './Cart.css';
-
+import { toast } from 'react-toastify';
 export default function Cart(){
 
     const { cart, totalPrice, cleanCart, removeFromCart } = useContext(CartContext);
     
     const handleEmpty = () => {
+        toast.success('Se ha vaciado el carrito', {
+            autoClose: 1000,
+          })
         cleanCart();
     }
 
